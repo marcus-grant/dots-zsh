@@ -32,3 +32,6 @@ alias recalpath='cd $_STORED_PATH'
 alias ..='cd ..'
 alias ...='..; ..'
 alias ....='...; ..'
+
+##### Exports
+export EDITOR='vim'
