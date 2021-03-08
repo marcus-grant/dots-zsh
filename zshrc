@@ -40,4 +40,5 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 ##### Exports
-export EDITOR='vim'
+export EDITOR='vim' # Default editor
+export TERM="xterm-256color" # Terminal Settings
