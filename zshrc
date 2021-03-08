@@ -1,8 +1,12 @@
 # The following lines were added by compinstall
 
+# General ZSH Settings
+# ===============================
+# Completions
 zstyle ':completion:*' format 'Completing %d'
 zstyle :compinstall filename '/Users/marcus/.zshrc'
 
+# Compinit autogen'd
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
@@ -12,8 +16,10 @@ HISTSIZE=10000
 SAVEHIST=1000
 # End of lines configured by zsh-newuser-install
 
-###### Aliases
-### LS
+
+# Aliases
+# ==============================
+# LS
 # Something's up with macOS --color option in ls
 # export LS_OPTIONS='--color=auto'
 export LS_OPTIONS='-G'
