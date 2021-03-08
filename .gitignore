@@ -1,2 +1,5 @@
 # OS Specific
 *.DS_Store
+
+# avoid vi-based swap files
+*.swp
