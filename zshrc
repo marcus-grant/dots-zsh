@@ -16,6 +16,11 @@ HISTSIZE=10000
 SAVEHIST=1000
 # End of lines configured by zsh-newuser-install
 
+# Key timeouts
+# I set this because vim/nvim feels sluggish in ZSH.
+# ZSH apparently treats escape chars differently so needs some tweaking.
+KEYTIMEOUT=1 # 1 = 10ms delay for escape chars
+
 
 # Aliases
 # ==============================
@@ -45,6 +50,5 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-##### Exports
-export EDITOR='vim' # Default editor
+##### Exports (many of these go in zshenv & zprofile)
 export TERM="xterm-256color" # Terminal Settings
