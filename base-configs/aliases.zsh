@@ -21,3 +21,14 @@ alias grep='grep --color=auto' # default to auto color mode
 alias igrep='grep -i' # case insensitive greps
 alias grep2='grep -A 2 -B 2' # case sens. search w/ 2 lines of results
 alias igrep2='igrep2 -i' # same as above but case sens. (2 lines before/after)
+
+# Tmux
+# Default options
+# TODO: Try out using -f to point to tmux.conf without noisy symlinks @ ~
+export TMUX_OPTS='-2' # force 256color mode,
+# Attaches tmux to last session
+alias tm='tmux attach -t main || tmux new -s main'
+alias tma='tmux attach -t'
+alias tmn='tmux new -s'
+alias tml='tmux list-sessions'
+alias tmk='tmux kill-session -t'
