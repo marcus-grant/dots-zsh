@@ -23,6 +23,9 @@ SAVEHIST=1000
 # ZSH apparently treats escape chars differently so needs some tweaking.
 KEYTIMEOUT=1 # 1 = 10ms delay for escape chars
 
+# Prompt
+# ==============================
+source "$DOTSDIR/zsh/configs/prompt.zsh"
 
 # Aliases
 # ==============================
