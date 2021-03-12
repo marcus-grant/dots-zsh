@@ -24,14 +24,7 @@ KEYTIMEOUT=1 # 1 = 10ms delay for escape chars
 
 # Aliases
 # ==============================
-# LS
-# Something's up with macOS --color option in ls
-# export LS_OPTIONS='--color=auto'
-export LS_OPTIONS='-G'
-alias ls='ls "$LS_OPTIONS"'
-alias l='ls -lhG'
-alias la='l -aG'
-alias lt='la -t'
+source base-configs/aliases.zsh
 
 ### CD
 # Store/Recall location
