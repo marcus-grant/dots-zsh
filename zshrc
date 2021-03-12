@@ -26,7 +26,7 @@ KEYTIMEOUT=1 # 1 = 10ms delay for escape chars
 
 # Aliases
 # ==============================
-source "$DOTSDIR/zsh/base-configs/aliases.zsh"
+source "$DOTSDIR/zsh/configs/aliases.zsh"
 
 ### CD
 # Store/Recall location
