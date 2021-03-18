@@ -32,3 +32,6 @@ alias tma='tmux attach -t'
 alias tmn='tmux new -s'
 alias tml='tmux list-sessions'
 alias tmk='tmux kill-session -t'
+
+# Git
+alias glog='git log --oneline --decorate --all --graph'
