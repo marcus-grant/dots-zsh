@@ -23,26 +23,13 @@ SAVEHIST=1000
 # ZSH apparently treats escape chars differently so needs some tweaking.
 KEYTIMEOUT=1 # 1 = 10ms delay for escape chars
 
-# Prompt
-# ==============================
+### Prompt
 source "$DOTSDIR/zsh/configs/prompt.zsh"
 
-# Aliases
-# ==============================
+### Aliases
 source "$DOTSDIR/zsh/configs/aliases.zsh"
 
-### CD
-# Store/Recall location
-_STORED_PATH='./'
-alias storepath='export _STORED_PATH="$(pwd)"'
-alias recalpath='cd $_STORED_PATH'
-
-# Dot / Ellipsis backwards cd
-alias ..='cd ..'
-alias ...='..; ..'
-alias ....='...; ..'
-
-### Python
+### Python - TODO: Move to zshenv or zprofile?
 # PyEnv
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
