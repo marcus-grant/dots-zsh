@@ -33,5 +33,11 @@ alias tmn='tmux new -s'
 alias tml='tmux list-sessions'
 alias tmk='tmux kill-session -t'
 
-# Git
+### Git
 alias glog='git log --oneline --decorate --all --graph'
+
+### GNU Pass
+# Use overridden 'pass' instead of gopass when installed
+if (( $+commands[gopass] )) ; then
+    alias pass='gopass'
+fi
