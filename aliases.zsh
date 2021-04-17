@@ -1,19 +1,12 @@
+# General functions
 # Most used aliases that can safely go into most environments
-
-### CD
-# Store/Recall location
-_STORED_PATH='./'
-alias storepath='export _STORED_PATH="$(pwd)"'
-alias recalpath='cd $_STORED_PATH'
-
-# Dot / Ellipsis backwards cd
-alias ..='cd ..'
-alias ...='..; ..'
-alias ....='...; ..'
+# Other aliases should be considered to go into its own plugin directory
+# Use oh my zsh's environment as an example, here's systemd plugin below:
+# https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/systemd/systemd.plugin.zsh
 
 ### LS
+# TODO: Remove the symlink arrows in ls, they always wrap, just show its a link
 # macOS doesn't respect --color, use -G instead
-# export LS_OPTIONS='--color=auto'
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export LS_OPTIONS="-G"
 elif [[ "$OSTYPE" == "linux"* ]]; then
@@ -21,11 +14,16 @@ elif [[ "$OSTYPE" == "linux"* ]]; then
 else
     export LS_OPTIONS=""
 fi
-# TODO: Remove the symlink arrows in ls, they always wrap, just show its a link
 alias ls='ls "$LS_OPTIONS"'
-alias l='ls -lh' # excl. hidden, human-read filesize, type annotated
-alias la='l -a'  # show all files incl. hidden
-alias lt='la -t'
+### CD
+# Store/Recall location
+_STORED_PATH='./'
+alias storepath='export _STORED_PATH="$(pwd)"'
+alias recalpath='cd $_STORED_PATH'
+# Dot / Ellipsis backwards cd
+alias ..='cd ..'
+alias ...='..; ..'
+alias ....='...; ..'
 
 ### Grep
 alias grep='grep --color=auto' # default to auto color mode
