@@ -15,6 +15,14 @@ else
     export LS_OPTIONS=""
 fi
 alias ls='ls "$LS_OPTIONS"'
+alias l='ls -a' # Compact, shows hidden
+alias l1='ls -1'  # Same as ls, but 1 per line (vertical)
+alias ll='la -lah' # List, hidden, human readable
+alias lt='ll -t' # Same as ll, but sorted by time, newest first
+alias ltr='lt -r' # Same as lt, but reverse order, oldest first
+alias lz='ll -S' # Same as ll, but sorted by size, largest first
+alias lzr='lt -r' # Same as lz, but reverse order, smallest first
+
 ### CD
 # Store/Recall location
 _STORED_PATH='./'
