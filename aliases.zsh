@@ -39,6 +39,19 @@ alias igrep='grep -i' # case insensitive greps
 alias grep2='grep -A 2 -B 2' # case sens. search w/ 2 lines of results
 alias igrep2='igrep2 -i' # same as above but case sens. (2 lines before/after)
 
+### Editing
+alias edit="$EDITOR"
+alias ezrc="$EDITOR $DOTSDIRZ/zprofile"
+alias ezpf="$EDITOR $DOTSDIRZ/zshrc"
+alias ezal="$EDITOR $DOTSDIRZ/aliases.zsh"
+alias rzrc="source ~/.zshrc; ~/.zprofile; compinit"
+alias ezfn="$EDITOR $(fd . $DOTSDIRZ/functions)"
+alias sedit="sudo $EDITOR"
+alias svim="sudo vim"
+alias snvim="sudo nvim"
+alias snano="sudo nano"
+alias semacs="sudo emacs"
+
 ### Tmux
 # Default options
 # TODO: Try out using -f to point to tmux.conf without noisy symlinks @ ~
@@ -58,16 +71,3 @@ alias glog='git log --oneline --decorate --all --graph'
 if (( $+commands[gopass] )) ; then
     alias pass='gopass'
 fi
-
-### Editing
-alias edit="$EDITOR"
-alias ezrc="$EDITOR $DOTSDIRZ/zprofile"
-alias ezpf="$EDITOR $DOTSDIRZ/zshrc"
-alias ezal="$EDITOR $DOTSDIRZ/aliases.zsh"
-alias rzrc="source ~/.zshrc; ~/.zprofile; compinit"
-alias ezfn="$EDITOR $(fd . $DOTSDIRZ/functions)"
-alias sedit="sudo $EDITOR"
-alias svim="sudo vim"
-alias snvim="sudo nvim"
-alias snano="sudo nano"
-alias semacs="sudo emacs"
