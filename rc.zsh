@@ -6,7 +6,7 @@
 # ===============================
 # Completions
 zstyle ':completion:*' format 'Completing %d'
-zstyle :compinstall filename '/Users/marcus/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
 # Compinit autogen'd
 autoload -Uz compinit
