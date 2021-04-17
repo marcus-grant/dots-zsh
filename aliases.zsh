@@ -44,7 +44,7 @@ alias edit="$EDITOR"
 alias ezrc="$EDITOR $DOTSDIRZ/zprofile"
 alias ezpf="$EDITOR $DOTSDIRZ/zshrc"
 alias ezal="$EDITOR $DOTSDIRZ/aliases.zsh"
-alias rzrc="source ~/.zshrc; ~/.zprofile; compinit"
+alias rzrc="source $HOME/.zprofile; source $HOME/.zshrc"
 alias ezfn="$EDITOR $(fd . $DOTSDIRZ/functions)"
 alias sedit="sudo $EDITOR"
 alias svim="sudo vim"
@@ -68,6 +68,6 @@ alias glog='git log --oneline --decorate --all --graph'
 
 ### GNU Pass
 # Use overridden 'pass' instead of gopass when installed
-if (( $+commands[gopass] )) ; then
+if hash gopass &> /dev/null; then
     alias pass='gopass'
 fi
