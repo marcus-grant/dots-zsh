@@ -65,9 +65,3 @@ alias tmk='tmux kill-session -t'
 
 ### Git
 alias glog='git log --oneline --decorate --all --graph'
-
-### GNU Pass
-# Use overridden 'pass' instead of gopass when installed
-if hash gopass &> /dev/null; then
-    alias pass='gopass'
-fi

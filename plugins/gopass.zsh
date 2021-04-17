@@ -9,3 +9,9 @@ gopass-update-zsh-completions() {
     mkdir -p $DOTSDIRZCOMP
     gopass completion zsh > $DOTSDIRZCOMP/_gopass
 }
+
+# Alias gopass to override GNU pass command
+# gopass is compatible with pass has + its own features anyhow
+if hash gopass &> /dev/null; then
+    alias pass='gopass'
+fi
