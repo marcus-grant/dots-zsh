@@ -58,3 +58,16 @@ alias glog='git log --oneline --decorate --all --graph'
 if (( $+commands[gopass] )) ; then
     alias pass='gopass'
 fi
+
+### Editing
+alias edit="$EDITOR"
+alias ezrc="$EDITOR $DOTSDIRZ/zprofile"
+alias ezpf="$EDITOR $DOTSDIRZ/zshrc"
+alias ezal="$EDITOR $DOTSDIRZ/aliases.zsh"
+alias rzrc="source ~/.zshrc; ~/.zprofile; compinit"
+alias ezfn="$EDITOR $(fd . $DOTSDIRZ/functions)"
+alias sedit="sudo $EDITOR"
+alias svim="sudo vim"
+alias snvim="sudo nvim"
+alias snano="sudo nano"
+alias semacs="sudo emacs"
