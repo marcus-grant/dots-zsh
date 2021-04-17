@@ -31,7 +31,7 @@ source "$DOTSDIR/zsh/prompt.zsh"
 source "$DOTSDIR/zsh/aliases.zsh"
 
 ### Plugins
-source $DOTSDIRZPLUG
+source $DOTSDIRZPLUG/gopass.zsh
 
 ### Python - TODO: Move to zshenv or zprofile?
 # PyEnv
