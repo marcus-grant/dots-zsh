@@ -17,4 +17,4 @@ export DOTSDIRZPLUG="$DOTSDIRZ/plugins"
 fpath+=$DOTSDIRZCOMP
 fpath+=$DOTSDIRZFUNC
 
-# Autoloads (funcs)
+### Autoloads (funcs)

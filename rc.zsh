@@ -32,12 +32,7 @@ source "$DOTSDIR/zsh/aliases.zsh"
 
 ### Plugins
 source $DOTSDIRZPLUG/gopass.zsh
-
-### Python - TODO: Move to zshenv or zprofile?
-# PyEnv
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+source $DOTSDIRZPLUG/pyenv.zsh
 
 ##### Exports (many of these go in zshenv & zprofile)
 export TERM="xterm-256color" # Terminal Settings
