@@ -25,7 +25,7 @@ SAVEHIST=1000
 KEYTIMEOUT=1 # 1 = 10ms delay for escape chars
 
 ### Prompt
-source "$DOTSDIR/zsh/configs/prompt.zsh"
+source "$DOTSDIR/zsh/prompt.zsh"
 
 ### Aliases
 source "$DOTSDIR/zsh/aliases.zsh"
