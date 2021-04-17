@@ -11,6 +11,7 @@ zstyle :compinstall filename '/Users/marcus/.zshrc'
 # Compinit autogen'd
 autoload -Uz compinit
 compinit
+
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -27,7 +28,7 @@ KEYTIMEOUT=1 # 1 = 10ms delay for escape chars
 source "$DOTSDIR/zsh/configs/prompt.zsh"
 
 ### Aliases
-source "$DOTSDIR/zsh/configs/aliases.zsh"
+source "$DOTSDIR/zsh/aliases.zsh"
 
 ### Python - TODO: Move to zshenv or zprofile?
 # PyEnv
