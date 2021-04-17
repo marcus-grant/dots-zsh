@@ -48,3 +48,8 @@ I'm considering moving all of my dotfiles into one repository so this repository
 | rb | ruby | Shorthand for ruby | -->
 <!-- | xt | extract | Shorthand for the `extract` decompression helper script |
 | ar | archive | Shorthand for the `archive` compression helper script | -->
+| tm | tmux attach -t main | Start tmux with default session `main` |
+| tma | tmux attach -t | Tmux attach to a given session name |
+| tmn | tmux new -s | Tmux create new session with given name |
+| tml | tmux new list-sessions | Tmux lists sessions |
+| tmk | tmux new kill-session | Tmux kill session of given name |
