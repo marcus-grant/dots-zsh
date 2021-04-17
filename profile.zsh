@@ -9,15 +9,11 @@ export DOTSDIR="$HOME/.dots" # A useful variable to point to dotfiles dir
 export DOTSDIRZ="$DOTSDIR/zsh"
 export DOTSDIRZCOMP="$DOTSDIRZ/completions"
 export DOTSDIRZFUNC="$DOTSDIRZ/functions"
+export DOTSDIRZPLUG="$DOTSDIRZ/plugins"
 
 # Paths
 export PATH="/opt/homebrew/bin:$PATH" # Homebrew bin
-# fpath=+/$DOTSDIRZCOMP
+fpath+=$DOTSDIRZCOMP
+fpath+=$DOTSDIRZFUNC
 
-# # Completions
-# # GoPass
-# if [ ! -d $DOTSDIRZCOMP/_gopass ]; then
-#     if (( $+commands[gopass] )); then
-#         gopass completion zsh > $DOTSDIRZCOMP/_gopass
-#     fi
-# fi
+# Autoloads (funcs)

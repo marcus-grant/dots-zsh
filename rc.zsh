@@ -30,6 +30,9 @@ source "$DOTSDIR/zsh/prompt.zsh"
 ### Aliases
 source "$DOTSDIR/zsh/aliases.zsh"
 
+### Plugins
+source $DOTSDIRZPLUG
+
 ### Python - TODO: Move to zshenv or zprofile?
 # PyEnv
 if command -v pyenv 1>/dev/null 2>&1; then

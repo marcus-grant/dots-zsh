@@ -1,0 +1,9 @@
+# GoPass plugin, handles completions and specific functions/aliases
+
+# First ensure the completions are there
+if [ ! -d $DOTSDIRZCOMP/_gopass ]; then
+    mkdir $DOTSDIRZCOMP/_gopass
+    if hash gopass &> /dev/null; then
+        gopass completion zsh > $DOTSDIRZCOMP/_gopass
+    fi
+fi
