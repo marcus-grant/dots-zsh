@@ -17,7 +17,8 @@ fi
 alias ls='ls "$LS_OPTIONS"'
 alias l='ls -a' # Compact, shows hidden
 alias l1='ls -1'  # Same as ls, but 1 per line (vertical)
-alias ll='la -lah' # List, hidden, human readable
+alias la='ls -AF' # Like l (compact) but with filetype symbols
+alias ll='ls -lah' # List, hidden, human readable
 alias lt='ll -t' # Same as ll, but sorted by time, newest first
 alias ltr='lt -r' # Same as lt, but reverse order, oldest first
 alias lz='ll -S' # Same as ll, but sorted by size, largest first
