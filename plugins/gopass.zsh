@@ -15,3 +15,10 @@ gopass-update-zsh-completions() {
 if hash gopass &> /dev/null; then
     alias pass='gopass'
 fi
+
+# Some nifty aliases
+alias passn='pass new'
+alias passh='pass show'
+alias passc='pass -c'
+alias passl='pass list'
+alias passe='pass edit'

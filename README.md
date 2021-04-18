@@ -53,3 +53,21 @@ I'm considering moving all of my dotfiles into one repository so this repository
 | tmn | tmux new -s | Tmux create new session with given name |
 | tml | tmux new list-sessions | Tmux lists sessions |
 | tmk | tmux new kill-session | Tmux kill session of given name |
+
+## Gopass Plugin
+
+The gopass plugin mostly just gives a function `gopass-update-zsh-completions` to update the completions in `./completions/_gopass` that are tracked by this repo each time it updates, so it should ready to be used after cloning and linking this repo. Just use `gopass-update-zsh-completions` when gopass updates something you need and push the changes on the repo.
+
+There's also some aliases. If `gopass` is found locally, then it will override `pass`, the GNU version of this password that `gopass` is a fully compatible superset of. Then there's also some shorthand aliases below to make interacting with it quicker.
+
+| Alias | Command   | Description                                              |
+| ----- | --------- | -------------------------------------------------------- |
+| passn | pass new  | Create a new password entry                              |
+| passh | pass show | Show a password entry, will search with given string     |
+| passc | pass -c   | Copy a password into clipboard, will search with string  |
+| passl | pass list | List stored password entries as directory tree           |
+| passc | pass edit | Edit a password entry using default editor               |
+
+
+
+
