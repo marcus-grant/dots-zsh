@@ -69,5 +69,10 @@ There's also some aliases. If `gopass` is found locally, then it will override `
 | passc | pass edit | Edit a password entry using default editor               |
 
 
+## PyEnv Plugin
 
+Pyenv is a great way to manage multiple sets of python environments with different python versions. Instead of using the system python that gets installed on most host systems that could disrupt dependencies of crucial system utilities written in python that are version controlled with each other.
 
+As opposed to *venv* it keeps all packages for each environment in one place and isn't meant to be used for each individual project. So less duplicate modules and interpreters will get used. I use pyenv to have a latest version of python for all my most used modules and utilities while maintaining an aging set of environments for everything that needs it. I only use *venv* when working on teams or need simple distribution of python scripts.
+
+This plugin looks for `pyenv` being installed, and if it isn't it will then check for all the usual locations it could be found and the `PYENV_ROOT` variable. If it's found but no shim is found it will call `pyenv init -` to create it.
