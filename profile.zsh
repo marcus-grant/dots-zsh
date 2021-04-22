@@ -1,10 +1,12 @@
 # Zprofile
+# Because it gets called AFTER zshenv (env.zsh in dotfiles)
+# this is a great place to set default values for variables if undefined
 
 ### General variables
 export EDITOR="vim" # Default editor
 export GPG_TTY=$(tty) # GPG needs to know what shell type is in use
 
-### Dotfiles Environment Vars
+### Dotfiles Environment Vars - Expanded from env.zsh definitions
 export DOTSDIR="$HOME/.dots" # A useful variable to point to dotfiles dir
 export DOTSDIRZ="$DOTSDIR/zsh"
 export DOTSDIRZCOMP="$DOTSDIRZ/completions"
@@ -18,3 +20,5 @@ fpath+=$DOTSDIRZCOMP
 fpath+=$DOTSDIRZFUNC
 
 ### Autoloads (funcs)
+
+### Plugin variables
