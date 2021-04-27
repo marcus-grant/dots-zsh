@@ -34,5 +34,14 @@ source "$DOTSDIR/zsh/aliases.zsh"
 source $DOTSDIRZPLUG/gopass.zsh
 source $DOTSDIRZPLUG/pyenv.zsh
 
+### PATH overrides - only some of these are needed to make some occur first
+# Homebew should default to /opt/homebrew/bin first
+# [[ ! $PATH == *"/opt/homebrew/bin"* ]] && export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
+
+
 ##### Exports (many of these go in zshenv & zprofile)
 export TERM="xterm-256color" # Terminal Settings
+
+# Remove duplicates in PATH
+typeset -U PATH

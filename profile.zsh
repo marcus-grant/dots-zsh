@@ -13,9 +13,8 @@ export DOTSDIRZCOMP="$DOTSDIRZ/completions"
 export DOTSDIRZFUNC="$DOTSDIRZ/functions"
 export DOTSDIRZPLUG="$DOTSDIRZ/plugins"
 
-### Paths
+### Paths (builtins)
 # Homebrew package binaries
-[ "${PATH#*/opt/homebrew/bin}" ] && export PATH="/opt/homebrew/bin:$PATH"
 fpath+=$DOTSDIRZCOMP
 fpath+=$DOTSDIRZFUNC
 

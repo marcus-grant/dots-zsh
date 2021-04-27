@@ -27,10 +27,11 @@ if ! $_pyenv_found ; then # IF it wasn't found
     # If something exists there...
     if [[ -d $_dir/bin ]]; then
       _pyenv_found=true
+      # TODO: Remove if it is found that calling pyenv init - is enough
       # And to avoid PATH clutter, only add it if it isn't already there
-      if [ ! "${PATH#*$_dir/bin}" ]; then
-        export PATH="$PATH:$_dir/bin"
-      fi
+      # if [ ! "${PATH#*$_dir/bin}" ]; then
+      #   export PATH="$PATH:$_dir/bin"
+      # fi
     fi
   done
 fi
@@ -39,12 +40,15 @@ fi
 
 # Now run pyenv init - if found
 if $_pyenv_found; then
-  if [ ! "${PATH#*PYENV_ROOT/shims}" ]; then
+  if [[ ! $PATH == *"PYENV_ROOT/shims"* ]]; then
+    echo "no pyenv"
     eval "$(pyenv init -)"
+  else
+    echo "pyenv already there"
   fi
   if (( $+commands[pyenv-virtualenv-init] )); then
     # Don't execute virtualenv init if it's already in PATH
-    if [ ! "${PATH#*/opt/homebrew/Cellar/pyenv-virualenv}" ]; then
+    if [[ ! $PATH == *"/opt/homebrew/Cellar/pyenv-virualenv"* ]]; then
       eval "$(pyenv virtualenv-init -)"
     fi
   fi
