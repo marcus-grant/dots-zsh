@@ -1,5 +1,10 @@
 # OS Specific
 *.DS_Store
 
+# Ignore Z core dumps since ZDOTDIR is now pointing to repo
+# Same for other locally cached info like history
+.zcompdump
+.zsh_history
+
 # avoid vi-based swap files
 *.swp
