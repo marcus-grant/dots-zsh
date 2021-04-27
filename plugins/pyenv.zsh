@@ -41,10 +41,7 @@ fi
 # Now run pyenv init - if found
 if $_pyenv_found; then
   if [[ ! $PATH == *"PYENV_ROOT/shims"* ]]; then
-    echo "no pyenv"
     eval "$(pyenv init -)"
-  else
-    echo "pyenv already there"
   fi
   if (( $+commands[pyenv-virtualenv-init] )); then
     # Don't execute virtualenv init if it's already in PATH
