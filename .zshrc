@@ -35,6 +35,7 @@ source "$ZDOTDIR/prompt.zsh"
 source "$ZDOTDIR/aliases.zsh"
 
 ### Plugins
+source $ZDOTDIRPLUG/fzf.zsh
 source $ZDOTDIRPLUG/gopass.zsh
 source $ZDOTDIRPLUG/pyenv.zsh
 
