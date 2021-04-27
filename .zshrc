@@ -6,7 +6,7 @@
 # ===============================
 # Completions
 zstyle ':completion:*' format 'Completing %d'
-zstyle :compinstall filename "$HOME/.zshrc"
+zstyle :compinstall filename "$ZDOTDIR/.zshrc"
 
 # Compinit autogen'd
 autoload -Uz compinit
@@ -18,6 +18,10 @@ HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=1000
 # End of lines configured by zsh-newuser-install
+
+# Before continuing because of unpredicatability of zsh config file calls...
+# make sure that zshenv has been sourced and its vars have definitions
+if [ -z $DOTSDIR ]; then source ~/.zshenv; fi
 
 # Key timeouts
 # I set this because vim/nvim feels sluggish in ZSH.
