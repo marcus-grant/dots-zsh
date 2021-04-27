@@ -25,14 +25,14 @@ SAVEHIST=1000
 KEYTIMEOUT=1 # 1 = 10ms delay for escape chars
 
 ### Prompt
-source "$DOTSDIR/zsh/prompt.zsh"
+source "$ZDOTDIR/prompt.zsh"
 
 ### Aliases
-source "$DOTSDIR/zsh/aliases.zsh"
+source "$ZDOTDIR/aliases.zsh"
 
 ### Plugins
-source $DOTSDIRZPLUG/gopass.zsh
-source $DOTSDIRZPLUG/pyenv.zsh
+source $ZDOTDIRPLUG/gopass.zsh
+source $ZDOTDIRPLUG/pyenv.zsh
 
 ### PATH overrides - only some of these are needed to make some occur first
 # Homebew should default to /opt/homebrew/bin first

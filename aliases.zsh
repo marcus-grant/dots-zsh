@@ -42,11 +42,11 @@ alias igrep2='igrep2 -i' # same as above but case sens. (2 lines before/after)
 
 ### Editing
 alias edit="$EDITOR"
-alias ezrc="$EDITOR $DOTSDIRZ/zprofile"
-alias ezpf="$EDITOR $DOTSDIRZ/zshrc"
-alias ezal="$EDITOR $DOTSDIRZ/aliases.zsh"
+alias ezrc="$EDITOR $ZDOTDIR/zprofile"
+alias ezpf="$EDITOR $ZDOTDIR/zshrc"
+alias ezal="$EDITOR $ZDOTDIR/aliases.zsh"
 alias rzrc="source $HOME/.zprofile; source $HOME/.zshenv source $HOME/.zshrc"
-alias ezfn="$EDITOR $(fd . $DOTSDIRZ/functions)"
+alias ezfn="$EDITOR $(fd . $ZDOTDIR/functions)"
 alias sedit="sudo $EDITOR"
 alias svim="sudo vim"
 alias snvim="sudo nvim"
