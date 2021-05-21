@@ -6,8 +6,8 @@ gopass-update-zsh-completions() {
         echo "ERROR: gopass not installed! Install it to update gopass completions"
         return 1
     fi
-    mkdir -p $ZDOTDIRCOMP
-    gopass completion zsh > $ZDOTDIRCOMP/_gopass
+    mkdir -p $DOTSDIRZCOMP
+    gopass completion zsh > $DOTSDIRZCOMP/_gopass
 }
 
 # Alias gopass to override GNU pass command

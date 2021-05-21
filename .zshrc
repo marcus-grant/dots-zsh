@@ -6,7 +6,7 @@
 # ===============================
 # Completions
 zstyle ':completion:*' format 'Completing %d'
-zstyle :compinstall filename "$ZDOTDIR/.zshrc"
+zstyle :compinstall filename "$DOTSDIRZ/.zshrc"
 
 # Compinit autogen'd
 autoload -Uz compinit
@@ -28,16 +28,19 @@ if [ -z $DOTSDIR ]; then source ~/.zshenv; fi
 # ZSH apparently treats escape chars differently so needs some tweaking.
 KEYTIMEOUT=1 # 1 = 10ms delay for escape chars
 
+# To debug here's a good place to echo out some messages
+echo "Path in zshrc is: $PATH"
+
 ### Prompt
-source "$ZDOTDIR/prompt.zsh"
+source "$DOTSDIRZ/prompt.zsh"
 
 ### Aliases
-source "$ZDOTDIR/aliases.zsh"
+source "$DOTSDIRZ/aliases.zsh"
 
 ### Plugins
-source $ZDOTDIRPLUG/fzf.zsh
-source $ZDOTDIRPLUG/gopass.zsh
-source $ZDOTDIRPLUG/pyenv.zsh
+source $DOTSDIRZPLUG/fzf.zsh
+source $DOTSDIRZPLUG/gopass.zsh
+source $DOTSDIRZPLUG/pyenv.zsh
 
 ### PATH overrides - only some of these are needed to make some occur first
 # Homebew should default to /opt/homebrew/bin first

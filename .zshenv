@@ -6,16 +6,16 @@
 
 ### Dotfiles Environment Vars - Expanded from env.zsh definitions
 export DOTSDIR="$HOME/.dots" # A useful variable to point to dotfiles dir
-export ZDOTDIR="$DOTSDIR/zsh"
-export ZDOTDIRCOMP="$ZDOTDIR/completions"
-export ZDOTDIRFUNC="$ZDOTDIR/functions"
-export ZDOTDIRPLUG="$ZDOTDIR/plugins"
+export DOTSDIRZ="$DOTSDIR/zsh" # ZDOTDIR is a ZSH var sets search for configs
+export DOTSDIRZCOMP="$DOTSDIRZ/completions"
+export DOTSDIRZFUNC="$DOTSDIRZ/functions"
+export DOTSDIRZPLUG="$DOTSDIRZ/plugins"
 export PYENV_ROOT=$HOME/.local/pyenv
 
 ### Paths (builtins)
 # Homebrew package binaries
-fpath+=$ZDOTDIRCOMP
-fpath+=$ZDOTDIRFUNC
+fpath+=$DOTSDIRZCOMP
+fpath+=$DOTSDIRZFUNC
 
 # The global default to use, if undefined default to system python
 export PYENV_VERSION=3.9.4
