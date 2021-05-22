@@ -6,7 +6,7 @@
 # ===============================
 # Completions
 zstyle ':completion:*' format 'Completing %d'
-zstyle :compinstall filename "$DOTSDIRZ/.zshrc"
+zstyle :compinstall filename "$DOTSDIRZ/rc.zsh"
 
 # Compinit autogen'd
 autoload -Uz compinit
@@ -28,8 +28,19 @@ if [ -z $DOTSDIR ]; then source ~/.zshenv; fi
 # ZSH apparently treats escape chars differently so needs some tweaking.
 KEYTIMEOUT=1 # 1 = 10ms delay for escape chars
 
-# To debug here's a good place to echo out some messages
-echo "Path in zshrc is: $PATH"
+### PATH overrides - only some of these are needed to make some occur first
+# Homebew should default to /opt/homebrew/bin first
+# [[ ! $PATH == *"/opt/homebrew/bin"* ]] && export PATH="/opt/homebrew/bin:$PATH"
+# This is needed early because PATH is needed in configs - especially prompt
+# export PATH="/opt/homebrew/bin:$PATH"
+# TODO: Path check doesnt actually find the string in PATH in any condition
+# if [[ "$PATH" == "/opt/homebrew/bin" ]]; then
+#     echo "homebrew path already there!!!"
+# else
+#     echo "homebrew path not there!!!"
+#     export PATH="/opt/homebrew/bin:$PATH"
+# fi
+export PATH="/opt/homebrew/bin:$PATH"
 
 ### Prompt
 source "$DOTSDIRZ/prompt.zsh"
@@ -41,11 +52,6 @@ source "$DOTSDIRZ/aliases.zsh"
 source $DOTSDIRZPLUG/fzf.zsh
 source $DOTSDIRZPLUG/gopass.zsh
 source $DOTSDIRZPLUG/pyenv.zsh
-
-### PATH overrides - only some of these are needed to make some occur first
-# Homebew should default to /opt/homebrew/bin first
-# [[ ! $PATH == *"/opt/homebrew/bin"* ]] && export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/opt/homebrew/bin:$PATH"
 
 
 ##### Exports (many of these go in zshenv & zprofile)
