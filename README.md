@@ -6,36 +6,38 @@ A repository for my ZSH configurations.
 
 I'm considering moving all of my dotfiles into one repository so this repository will likely be merged with my bash, vim, nvim, tmux, alacritty and tmux dotfiles spread out here in their respectively `dots-*` repository.
 
+Most features will be divided into *plugins* which while they may not necessarily meet the typical standard for a plugin. It's easier to just name them the same thing because all of these features will be enabled and disabled through simple enabling variables. These are stored in the `./plugins` directory. Everything else in the root directory are core functionality.
+
 ## Aliases
 
 ### General Aliases
 
-| Alias | Command | Description |
---- | --- | --- |
-| l | ls -a | A compact directory view, `-a` **all** types of file/dir references |
-| la | ls -AF | Compact directory view, `-A` for **all except implied . ..** and `-F` to **append filetype indicator**. No symbol = file, `/` for dirs, `@` for symlinks, etc. |
-| l1 | ls -1 | Shows exactly what `ls` shows, but **1** per line as a list without extra info |
-| ll | ls -ahl | Shows **all** (`a`) in **human-readable** form (`h`) as a **list** (`l`) |
-| lt | ll -t | Same as `ll` but sorted by time, newest first |
-| ltr | lt -r | Same as `lt` but reverse order, oldest first |
-| lz | ll -S | Same as `ll` but sorted by si`z`e, largest first |
-| lzr | lz -r | Same as `lz` but reverse order, smallest first |
-| catt | ls or cat | Either views item with `ls` if directory, or `cat` if file |
-| .. | cd .. | Shorthand for `cd ..` in a shorter form |
-| ... | ..; .. | Same as `..` but goes up two levels of parent directories |
-| .... | ...; .. | Same as `...` but goes up three levels of parent directories |
+| Alias | Command | Description                                                         |
+| ----- | ------- | -----------                                                         |
+| l     | ls -a   | A compact directory view, `-a` **all** types of file/dir references |
+| la    | ls -AF  | Compact directory view, `-A` for **all except implied . ..** and `-F` to **append filetype indicator**. No symbol = file, `/` for dirs, `@` for symlinks, etc. |
+| l1    | ls -1   | Shows exactly what `ls` shows, but **1** per line as a list without extra info |
+| ll    | ls -ahl | Shows **all** (`a`) in **human-readable** form (`h`) as a **list** (`l`) |
+| lt    | ll -t   | Same as `ll` but sorted by time, newest first                       |
+| ltr   | lt -r   | Same as `lt` but reverse order, oldest first                        |
+| lz    | ll -S   | Same as `ll` but sorted by si`z`e, largest first                    |
+| lzr   | lz -r   | Same as `lz` but reverse order, smallest first                      |
+| catt  | ls or cat | Either views item with `ls` if directory, or `cat` if file        |
+| ..    | cd ..   | Shorthand for `cd ..` in a shorter form                             |
+| ...   | ..; ..  | Same as `..` but goes up two levels of parent directories           |
+| ....  | ...; .. | Same as `...` but goes up three levels of parent directories        |
 <!-- | md | mkdir -p | A quick way to type out a tree of directories to add in one cmd |
 | rd | rmdir | A quick way to delete directories | -->
 <!-- | _ | sudo | A **really** short way to type `sudo` |
 | q | exit | Shorthand for exiting the current shell |
 | h | history | Shorthand for `history` command | -->
-| edit | $EDITOR | Edits with the default editor defined in `EDITOR` environment variable|
-| ezrc | edit ~/.zshrc | Edit the zsh config with default `EDITOR` |
-| ezpf | $edit ~/.zprofile | Edit the zsh profile with default `EDITOR` |
-| ezal | $edit (ZAliases) | Edit the zsh general aliases with default `EDITOR` |
-| rzrc | source ~/.zshrc; | Reload zsh configs, useful for editing configurations |
+| edit  | $EDITOR | Edits with the default editor defined in `EDITOR` environment variable |
+| ezrc  | edit ~/.zshrc | Edit the zsh config with default `EDITOR`                     |
+| ezpf  | $edit ~/.zprofile | Edit the zsh profile with default `EDITOR`                |
+| ezal  | $edit (ZAliases) | Edit the zsh general aliases with default `EDITOR`         |
+| rzrc  | source ~/.zshrc; | Reload zsh configs, useful for editing configurations |
 | sedit | sudo $EDITOR | Use default `EDITOR` with sudo priveleges |
-| svim | sudo vim | Use vim with sudo |
+| svim  | sudo vim | Use vim with sudo |
 | snvim | sudo nvim | Use nvim with sudo |
 | snano | sudo nano | Use nano with sudo |
 | semacs | sudo emacs | Use emacs with sudo |
