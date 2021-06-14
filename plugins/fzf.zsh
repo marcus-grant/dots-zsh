@@ -4,4 +4,6 @@
 
 export FZF_DEFAULT_COMMAND="fd . --hidden --exclude .git"
 
-alias fcd='cd $(fd . --type directory | fzf)'
+alias fcd='cd $(fd . --type directory --hidden | fzf)'
+alias fcdh='cd $(fd . ~ --type directory --hidden | fzf)'
+alias fcdr='cd $(fd . / --type directory --hidden | fzf)'
