@@ -40,6 +40,8 @@ KEYTIMEOUT=1 # 1 = 10ms delay for escape chars
 #     echo "homebrew path not there!!!"
 #     export PATH="/opt/homebrew/bin:$PATH"
 # fi
+
+# TODO: Make this OS sensitive
 export PATH="/opt/homebrew/bin:$PATH"
 
 ### Prompt

@@ -36,9 +36,14 @@ alias ....='...; ..'
 
 ### Grep
 alias grep='grep --color=auto' # default to auto color mode
-alias igrep='grep -i' # case insensitive greps
+alias grepi='grep -i' # case insensitive greps
 alias grep2='grep -A 2 -B 2' # case sens. search w/ 2 lines of results
-alias igrep2='igrep2 -i' # same as above but case sens. (2 lines before/after)
+alias grepi2='igrep2 -i' # same as above but case sens. (2 lines before/after)
+
+### Find/FD
+if command -v fdfind &> /dev/null; then
+    alias fd='fdfind'
+fi
 
 ### Editing
 alias edit="$EDITOR"
@@ -46,7 +51,6 @@ alias ezrc="$EDITOR $DOTSDIRZ/profile.zsh"
 alias ezpf="$EDITOR $DOTSDIRZ/rc.zsh"
 alias ezal="$EDITOR $DOTSDIRZ/aliases.zsh"
 alias rzrc="source $DOTSDIRZ/profile.zsh; source $DOTSDIRZ/env.zsh; source $DOTSDIRZ/rc.zsh"
-alias ezfn="$EDITOR $(fd . $DOTSDIRZ/functions)"
 alias sedit="sudo $EDITOR"
 alias svim="sudo vim"
 alias snvim="sudo nvim"

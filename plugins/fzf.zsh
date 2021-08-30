@@ -2,8 +2,28 @@
 
 # TODO Make this more flexible and able to work with find, ag, etc
 
-export FZF_DEFAULT_COMMAND="fd . --hidden --exclude .git"
+export FDCMD='echo fd command not found'
+if command -v fdfind &> /dev/null; then
+    FDCMD='fdfind'
+    # export FZF_DEFAULT_COMMAND="/usr/bin/fdfind . --type file --hidden --exclude .git"
+elif command -v fd &> /dev/null; then
+    FDCMD='fd'
+    # export FZF_DEFAULT_COMMAND="fd . --type file --hidden --exclude .git"
+fi
+export FZF_DEFAULT_COMMAND="$FDCMD . --type file --hidden --exclude .git"
 
-alias fcd='cd $(fd . --type directory --hidden | fzf)'
-alias fcdh='cd $(fd . ~ --type directory --hidden | fzf)'
-alias fcdr='cd $(fd . / --type directory --hidden | fzf)'
+function fcd () {
+    DIR_TO_CD="$(pwd)"
+    if [[ $# -gt 0 ]]; then
+        DIR_TO_CD="$1"
+    fi
+    DIR_TO_CD=$(fd . $DIR_TO_CD --type directory --hidden --exclude .git | fzf)
+    if [[ -d $DIR_TO_CD ]]; then
+        cd $DIR_TO_CD
+    else
+        exit 1
+    fi
+}
+
+alias fcdr="fcd /"
+alias fcdh="fcd $HOME"
