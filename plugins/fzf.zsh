@@ -20,8 +20,6 @@ function fcd () {
     DIR_TO_CD=$(fd . $DIR_TO_CD --type directory --hidden --exclude .git | fzf)
     if [[ -d $DIR_TO_CD ]]; then
         cd $DIR_TO_CD
-    else
-        exit 1
     fi
 }
 

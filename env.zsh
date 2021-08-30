@@ -17,5 +17,8 @@ export PYENV_ROOT=$HOME/.local/pyenv
 fpath+=$DOTSDIRZCOMP
 fpath+=$DOTSDIRZFUNC
 
+### Defaults
+export EDITOR=vim
+
 # The global default to use, if undefined default to system python
 export PYENV_VERSION=3.9.4
