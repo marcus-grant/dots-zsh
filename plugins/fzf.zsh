@@ -18,6 +18,7 @@ function fcd () {
         DIR_TO_CD="$1"
     fi
     DIR_TO_CD=$(fd . $DIR_TO_CD --type directory --hidden --exclude .git | fzf)
+    cd $DIR_TO_CD
 }
 
 alias fcdr="fcd /"
