@@ -13,9 +13,16 @@ fi
 export FZF_DEFAULT_COMMAND="$FDCMD . --type file --hidden --exclude .git"
 
 function fcd () {
-    DIR_TO_CD="$(pwd)"
+    _PWD="$(pwd)"
+    DIR_ARG=$_PWD
     if [[ $# -gt 0 ]]; then
-        DIR_TO_CD="$1"
+        DIR_ARG="$1"
+    fi
+    SELECTED_DIR=$(fd . $DIR_ARG --type directory --hidden --exclude .git | fzf)
+    if [[ -d $SELECTED_DIR ]]; then
+        cd $SELECTED_DIR
+    else
+        cd $_PWD
     fi
     DIR_TO_CD=$(fd . $DIR_TO_CD --type directory --hidden --exclude .git | fzf)
     cd $DIR_TO_CD
