@@ -6,4 +6,7 @@ fi
 if command -v hcloud &> /dev/null; then
     hcloud completion zsh > ~/.config/hcloud/completion/zsh/_hcloud
 fi
+
+fpath+=(~/.config/hcloud/completion/zsh)
+autoload -Uz compinit; compinit
     
