@@ -54,6 +54,7 @@ source "$DOTSDIRZ/aliases.zsh"
 source $DOTSDIRZPLUG/fzf.zsh
 source $DOTSDIRZPLUG/gopass.zsh
 source $DOTSDIRZPLUG/pyenv.zsh
+source $DOTSDIRZPLUG/hcloud.zsh
 
 
 ##### Exports (many of these go in zshenv & zprofile)
