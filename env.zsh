@@ -20,5 +20,7 @@ fpath+=$DOTSDIRZFUNC
 ### Defaults
 export EDITOR=vim
 
+# Langs
+export PATH="$PATH:$HOME/.cargo/bin"
 # The global default to use, if undefined default to system python
 export PYENV_VERSION=3.9.4
