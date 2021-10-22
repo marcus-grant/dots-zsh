@@ -5,6 +5,7 @@
 export FDCMD='echo fd command not found'
 if command -v fdfind &> /dev/null; then
     FDCMD='fdfind'
+    alias fd='fdfind'
     # export FZF_DEFAULT_COMMAND="/usr/bin/fdfind . --type file --hidden --exclude .git"
 elif command -v fd &> /dev/null; then
     FDCMD='fd'
@@ -24,8 +25,9 @@ function fcd () {
     else
         cd $_PWD
     fi
-    DIR_TO_CD=$(fd . $DIR_TO_CD --type directory --hidden --exclude .git | fzf)
-    cd $DIR_TO_CD
+    # TODO DELETEME This seems like a bug, if fcd works as expected delete this
+    # DIR_TO_CD=$(fd . $DIR_TO_CD --type directory --hidden --exclude .git | fzf)
+    # cd $DIR_TO_CD
 }
 
 alias fcdr="fcd /"

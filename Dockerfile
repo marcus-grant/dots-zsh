@@ -9,7 +9,10 @@ RUN apt-get update && apt install -y \
     git \
     curl \
     nano \
-    vim 
+    vim  \
+    fd-find \
+    ripgrep \
+    fzf
 
 RUN export EDITOR=nano
 RUN mkdir /root/.dots
