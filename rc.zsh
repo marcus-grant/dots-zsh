@@ -8,10 +8,6 @@
 zstyle ':completion:*' format 'Completing %d'
 zstyle :compinstall filename "$DOTSDIRZ/rc.zsh"
 
-# Compinit autogen'd
-autoload -Uz compinit
-compinit
-
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -53,7 +49,8 @@ source "$DOTSDIRZ/aliases.zsh"
 ### Plugins
 source $DOTSDIRZPLUG/fzf.zsh
 source $DOTSDIRZPLUG/gopass.zsh
-source $DOTSDIRZPLUG/pyenv.zsh
+source $DOTSDIRZPLUG/asdf.zsh
+# source $DOTSDIRZPLUG/pyenv.zsh
 source $DOTSDIRZPLUG/hcloud.zsh
 
 
@@ -62,3 +59,7 @@ export TERM="xterm-256color" # Terminal Settings
 
 # Remove duplicates in PATH
 typeset -U PATH
+
+# Compinit autogen'd
+autoload -Uz compinit
+compinit
