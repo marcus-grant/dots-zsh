@@ -3,9 +3,8 @@
 # Good place to store core system and shell env variables.
 # by Marcus Grant March 2021 CC-BY licencse
 
-
 ### Dotfiles Environment Vars - Expanded from env.zsh definitions
-export DOTSDIR="$HOME/.dots" # A useful variable to point to dotfiles dir
+export DOTSDIR="$HOME/.config" # A useful variable to point to dotfiles dir
 export DOTSDIRZ="$DOTSDIR/zsh" # ZDOTDIR is a ZSH var sets search for configs
 export DOTSDIRZCOMP="$DOTSDIRZ/completions"
 export DOTSDIRZFUNC="$DOTSDIRZ/functions"
