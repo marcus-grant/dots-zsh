@@ -56,6 +56,12 @@ alias svim="sudo vim"
 alias snvim="sudo nvim"
 alias snano="sudo nano"
 alias semacs="sudo emacs"
+#### NeoVim
+if ! command -v nvim &> /dev/null; then
+    if [ -x ~/.local/bin/nvim.appimage ]; then
+        alias nvim="$HOME/.local/bin/nvim.appimage"
+    fi
+fi
 
 ### Tmux
 # Default options
