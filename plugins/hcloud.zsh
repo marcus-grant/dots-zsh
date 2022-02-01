@@ -13,13 +13,17 @@ autoload -Uz compinit; compinit
 # Load hcloud into its own token variable for molecule & scripts
 # -v flag will print it
 function hcloud-token () {
-  echo "$(pass show dev/hetzner-token 2> /dev/null | tail -n 1)"
+  echo "$(pass show dev/hcloud_token 2> /dev/null | tail -n 1)"
+}
+
+function hcloud-token-load () {
+  export HCLOUD_TOKEN="$(hcloud-token)"
 }
 
 # Load env var for HCLOUD_TOKEN if it can be acquired
-export HCLOUD_TOKEN=$(hcloud-token)
-if [[ ${#HCLOUD_TOKEN} -lt 32 ]]; then
-  if [[ ${#HCLOUD_TOKEN} -gt 68 ]]; then
-    unset HCLOUD_TOKEN
-  fi
-fi
+# export HCLOUD_TOKEN=$(hcloud-token)
+# if [[ ${#HCLOUD_TOKEN} -lt 32 ]]; then
+#   if [[ ${#HCLOUD_TOKEN} -gt 68 ]]; then
+#     unset HCLOUD_TOKEN
+#   fi
+# fi
