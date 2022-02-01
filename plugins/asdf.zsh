@@ -30,3 +30,12 @@ if [[ -f "$ASDF_DIR/asdf.sh" ]]; then
         fpath=(${ASDF_COMPLETIONS} $fpath)
     fi
 fi
+
+# function to install asdf
+asdf-install ()
+{
+
+  if [ ! -d "$ASDF_DIR" ]; then
+    git clone https://github.com/asdf-vm/asdf.git "$ASDF_DIR"
+  fi
+}
