@@ -48,7 +48,6 @@ source "$DOTSDIRZ/aliases.zsh"
 
 ### Plugins
 source $DOTSDIRZPLUG/fzf.zsh
-# source $DOTSDIRZPLUG/gopass.zsh
 source $DOTSDIRZPLUG/asdf.zsh
 # source $DOTSDIRZPLUG/pyenv.zsh
 source $DOTSDIRZPLUG/hcloud.zsh
