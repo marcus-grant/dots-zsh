@@ -19,6 +19,9 @@ fpath+=$DOTSDIRZFUNC
 ### Defaults
 export EDITOR=vim
 
+# PATH
+export PATH="$PATH:$HOME/.local/bin"
+
 # Langs
 export PATH="$PATH:$HOME/.cargo/bin"
 # The global default to use, if undefined default to system python
