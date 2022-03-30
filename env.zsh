@@ -13,6 +13,7 @@ export PYENV_ROOT=$HOME/.local/pyenv
 
 ### Paths (builtins)
 # Homebrew package binaries
+# NOTE: Is this what gets used to index completions???
 fpath+=$DOTSDIRZCOMP
 fpath+=$DOTSDIRZFUNC
 
