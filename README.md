@@ -78,3 +78,22 @@ Pyenv is a great way to manage multiple sets of python environments with differe
 As opposed to *venv* it keeps all packages for each environment in one place and isn't meant to be used for each individual project. So less duplicate modules and interpreters will get used. I use pyenv to have a latest version of python for all my most used modules and utilities while maintaining an aging set of environments for everything that needs it. I only use *venv* when working on teams or need simple distribution of python scripts.
 
 This plugin looks for `pyenv` being installed, and if it isn't it will then check for all the usual locations it could be found and the `PYENV_ROOT` variable. If it's found but no shim is found it will call `pyenv init -` to create it.
+
+## Molecule Plugin
+
+Aliases, functions, and scripts to work with the [Ansible Molecule](https://molecule.readthedocs.io/en/latest/) ansible testing framework.
+
+### Aliases
+
+| Alias | Command     | Description                                     |
+| ----- | ---------   | ----------------------------------------------- |
+| mol   | molecule    | Short-hand for the molecule command             |
+| molr  | mol reset   | Reset molecule instance states                  |
+| moll  | mol lint    | Lint the role/collection/playbook               |
+| mold  | mol destroy | Destroy molecule instances                      |
+| molcr | mol create  | Create molecule instances                       |
+| molp  | mol prepare | Run prepare playbooks on molecule instances     |
+| molc  | mol converge| Run all scenarios on their associated instances |
+| moli|mol idempotence| Run converge 2nd time to ensure idempotence     |
+| molv  | mol verify  | Run verify play to test role/collection         |
+| molt  | mol test    | Run full command sequence (moll,mold,molcr,molp,molc,moli,molv,mold)|

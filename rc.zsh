@@ -51,6 +51,7 @@ source $DOTSDIRZPLUG/fzf.zsh
 source $DOTSDIRZPLUG/asdf.zsh
 # source $DOTSDIRZPLUG/pyenv.zsh
 source $DOTSDIRZPLUG/hcloud.zsh
+source $DOTSDIRZPLUG/molecule.zsh
 
 
 ##### Exports (many of these go in zshenv & zprofile)
