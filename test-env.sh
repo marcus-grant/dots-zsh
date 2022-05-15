@@ -15,7 +15,7 @@ while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symli
 done
 SCRIPT_DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
 
-TEST_VOLUME="$SCRIPT_DIR:/root/.dots/zsh:rw"
+TEST_VOLUME="$SCRIPT_DIR:/root/.config/zsh:rw"
 
 # Check if docker installed
 if ! command -v docker &> /dev/null

@@ -15,12 +15,12 @@ RUN apt-get update && apt install -y \
     fzf
 
 RUN export EDITOR=nano
-RUN mkdir /root/.dots
-RUN mkdir /root/.dots/zsh
+RUN mkdir /root/.config
+RUN mkdir /root/.config/zsh
 # RUN rm /root/.zshrc /root/.zprofile /root/.zshenv
-RUN ln -sf /root/.dots/zsh/rc.zsh /root/.zshrc
-RUN ln -sf /root/.dots/zsh/profile.zsh /root/.zprofile
-RUN ln -sf /root/.dots/zsh/env.zsh /root/.zshenv
+RUN ln -sf /root/.config/zsh/rc.zsh /root/.zshrc
+RUN ln -sf /root/.config/zsh/profile.zsh /root/.zprofile
+RUN ln -sf /root/.config/zsh/env.zsh /root/.zshenv
 RUN curl -o /tmp/starship-install.sh https://starship.rs/install.sh
 RUN chmod +x /tmp/starship-install.sh 
 RUN /tmp/starship-install.sh -y
