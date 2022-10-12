@@ -10,7 +10,7 @@
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export LS_OPTIONS="-G"
 elif [[ "$OSTYPE" == "linux"* ]]; then
-    export LS_OPTIONS="--color=auto"
+    export LS_OPTIONS="--color=auto --group-directories-first"
 else
     export LS_OPTIONS=""
 fi
