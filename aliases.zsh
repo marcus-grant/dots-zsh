@@ -76,3 +76,6 @@ alias tmk='tmux kill-session -t'
 
 ### Git
 alias glog='git log --oneline --decorate --all --graph'
+
+### Pass/PWGen/password stuff
+alias pwgen16='pwgen -ncy 16 1'
