@@ -20,6 +20,11 @@ function hcloud-token-load () {
   export HCLOUD_TOKEN="$(hcloud-token)"
 }
 
+function phcloud () {
+    if [[ -z $HCLOUD_TOKEN ]]; then hcloud-token-load; fi
+    hcloud
+}
+
 # Load env var for HCLOUD_TOKEN if it can be acquired
 # export HCLOUD_TOKEN=$(hcloud-token)
 # if [[ ${#HCLOUD_TOKEN} -lt 32 ]]; then
