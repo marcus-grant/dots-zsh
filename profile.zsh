@@ -12,3 +12,7 @@ export GPG_TTY=$(tty) # GPG needs to know what shell type is in use
 ### Autoloads (funcs)
 
 ### Plugin variables
+# pnpm
+export PNPM_HOME="/Users/marcus/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
