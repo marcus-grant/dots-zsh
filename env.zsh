@@ -48,3 +48,8 @@ export DIR_OPS="$DIR_PROJ/ops"
 # TODO: Move infra to immediately inside root of ops & put seperate ansible/terra/shell dirs as siblings
 export DIR_INFRA="$DIR_OPS/infra"
 
+# Load secrets last
+if [ -f $DOTSDIRZ ]; then
+    source $DOTSDIRZ/secrets.zsh
+fi
+
