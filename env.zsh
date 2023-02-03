@@ -49,7 +49,7 @@ export DIR_OPS="$DIR_PROJ/ops"
 export DIR_INFRA="$DIR_OPS/infra"
 
 # Load secrets last
-if [ -f $DOTSDIRZ ]; then
+if [ -f $DOTSDIRZ/secrets.zsh ]; then
     source $DOTSDIRZ/secrets.zsh
 fi
 
