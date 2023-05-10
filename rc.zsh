@@ -47,6 +47,7 @@ source "$DOTSDIRZ/prompt.zsh"
 source "$DOTSDIRZ/aliases.zsh"
 
 ### Plugins
+source $DOTSDIRZPLUG/general.zsh
 source $DOTSDIRZPLUG/fzf.zsh
 source $DOTSDIRZPLUG/asdf.zsh
 # source $DOTSDIRZPLUG/pyenv.zsh
