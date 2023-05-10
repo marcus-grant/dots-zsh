@@ -18,6 +18,14 @@ timestamp-fs() {
 }
 alias timestampfs='timestamp-fs'
 alias tstampfs='timestamp-fs'
+# Timestamp function getting the shortest full version of
+# iso data timestamp YYYYmmdd (local)
+timestamp-short() {
+    echo "$(date +"%Y%m%d")"
+}
+alias timestampshort='timestamp-short'
+alias tstampshort='timestamp-short'
+alias tstampsh='timestamp-short'
 # Timestamp function getting only current week of year (local)
 timestamp-week() {
     echo "$(date +"%W")"
