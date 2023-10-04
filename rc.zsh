@@ -37,9 +37,6 @@ KEYTIMEOUT=1 # 1 = 10ms delay for escape chars
 #     export PATH="/opt/homebrew/bin:$PATH"
 # fi
 
-# TODO: Make this OS sensitive
-export PATH="/opt/homebrew/bin:$PATH"
-
 ### Prompt
 source "$DOTSDIRZ/prompt.zsh"
 
@@ -49,16 +46,14 @@ source "$DOTSDIRZ/aliases.zsh"
 ### Plugins
 source $DOTSDIRZPLUG/general.zsh
 source $DOTSDIRZPLUG/fzf.zsh
-source $DOTSDIRZPLUG/asdf.zsh
+# source $DOTSDIRZPLUG/asdf.zsh
 # source $DOTSDIRZPLUG/pyenv.zsh
 source $DOTSDIRZPLUG/hcloud.zsh
 source $DOTSDIRZPLUG/molecule.zsh
 source $DOTSDIRZPLUG/zk.zsh
 
 
-##### Exports (many of these go in zshenv & zprofile)
-export TERM="xterm-256color" # Terminal Settings
-
+# ZSH Configs (Misc.)
 # Remove duplicates in PATH
 typeset -U PATH
 
