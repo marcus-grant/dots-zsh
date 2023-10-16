@@ -3,6 +3,10 @@
 # Good place to store core system and shell env variables.
 # by Marcus Grant March 2021 CC-BY licencse
 
+# Source the profile file
+if [ -f $HOME/.profile ]; then
+    source $HOME/.profile
+fi
 # TODO: Consider simplifying this &/or move to ansible controller profile file
 ### Dotfiles Environment Vars - Expanded from env.zsh definitions
 export DOTSDIR="$HOME/.config" # A useful variable to point to dotfiles dir
