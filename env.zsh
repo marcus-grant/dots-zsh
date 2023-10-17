@@ -14,7 +14,6 @@ export DOTSDIRZ="$DOTSDIR/zsh" # ZDOTDIR is a ZSH var sets search for configs
 export DOTSDIRZCOMP="$DOTSDIRZ/completions"
 export DOTSDIRZFUNC="$DOTSDIRZ/functions"
 export DOTSDIRZPLUG="$DOTSDIRZ/plugins"
-export PYENV_ROOT=$HOME/.local/pyenv
 
 ### Paths (builtins)
 # Homebrew package binaries
