@@ -11,7 +11,7 @@ elif command -v fd &> /dev/null; then
     FDCMD='fd'
     # export FZF_DEFAULT_COMMAND="fd . --type file --hidden --exclude .git"
 fi
-export FZF_DEFAULT_COMMAND="$FDCMD . --type file --hidden --exclude .git"
+export FZF_DEFAULT_COMMAND="$FDCMD . --type file --hidden --exclude .git --exclude node_modules --exclude .venv --exclude venv"
 
 function fcd () {
     _PWD="$(pwd)"
@@ -19,7 +19,14 @@ function fcd () {
     if [[ $# -gt 0 ]]; then
         DIR_ARG="$1"
     fi
-    SELECTED_DIR=$(fd . $DIR_ARG --type directory --no-ignore --hidden --exclude .git --exclude node_modules | fzf)
+    SELECTED_DIR=$(fd . $DIR_ARG --type directory --no-ignore --hidden \
+        --exclude .git \
+        --exclude node_modules \
+        --exclude venv --exclude .venv \
+        --exclude Library/Containers \
+        --exclude Library/Group\ Containers \
+        --exclude Library/Caches \
+    | fzf)
     if [[ -d $SELECTED_DIR ]]; then
         cd $SELECTED_DIR
     else
