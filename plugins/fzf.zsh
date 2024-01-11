@@ -23,8 +23,8 @@ function fcd () {
         --exclude .git \
         --exclude node_modules \
         --exclude venv --exclude .venv \
-        --exclude Library/Containers \
-        --exclude Library/Group\ Containers \
+        --exclude Library/Containers --exclude Library/Group\ Containers \
+        --exclude Library/Autosave\ Information \
         --exclude Library/Caches \
     | fzf)
     if [[ -d $SELECTED_DIR ]]; then
