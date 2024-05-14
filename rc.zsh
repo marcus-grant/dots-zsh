@@ -49,6 +49,7 @@ source $DOTSDIRZPLUG/fzf.zsh
 source $DOTSDIRZPLUG/hcloud.zsh
 source $DOTSDIRZPLUG/molecule.zsh
 source $DOTSDIRZPLUG/zk.zsh
+source $DOTSDIRZPLUG/ai.zsh
 
 
 # ZSH Configs (Misc.)
