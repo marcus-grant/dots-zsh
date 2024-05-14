@@ -19,14 +19,17 @@ function fcd () {
     if [[ $# -gt 0 ]]; then
         DIR_ARG="$1"
     fi
+
     SELECTED_DIR=$(fd . $DIR_ARG --type directory --no-ignore --hidden \
         --exclude .git \
         --exclude node_modules \
         --exclude venv --exclude .venv \
+        --exclude '.cache' --exclude __pycache__ \
         --exclude Library/Containers --exclude Library/Group\ Containers \
         --exclude Library/Autosave\ Information \
         --exclude Library/Caches \
     | fzf)
+
     if [[ -d $SELECTED_DIR ]]; then
         cd $SELECTED_DIR
     else
