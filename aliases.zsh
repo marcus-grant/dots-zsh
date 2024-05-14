@@ -7,6 +7,22 @@
 ### LS
 # TODO: Remove the symlink arrows in ls, they always wrap, just show its a link
 # macOS doesn't respect --color, use -G instead
+### LS
+# TODO: Remove the symlink arrows in ls, they always wrap, just show its a link
+# macOS doesn't respect --color, use -G instead
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # DELETEME if ls aliases work on all systems
+    # export LS_OPTIONS="-G"
+    alias ls="ls $LS_OPTIONS"
+elif [[ "$OSTYPE" == "linux"* ]]; then
+    # DELETEME if ls aliases work on all systems
+    # export LS_OPTIONS="--color=auto --group-directories-first"
+    alias ls="ls $LS_OPTIONS"
+else
+    # export LS_OPTIONS="" # DELETEME if ls aliases work on all systems
+    alias ls="ls"
+fi
+# alias ls="ls $LS_OPTIONS" # DELETEME if we stick with conditional aliases
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export LS_OPTIONS="-G"
 elif [[ "$OSTYPE" == "linux"* ]]; then
