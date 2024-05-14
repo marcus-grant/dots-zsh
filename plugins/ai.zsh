@@ -10,10 +10,15 @@ function gitgpt {
   _pt="$_pt Skip describing any reformatting changes."
   _pt="$_pt Remember title should be less than 50 characters."
   _pt="$_pt That includes the branch name, colon and space."
-  _pt="$_pt Current branch format is ${branchName}: "
+  _pt="$_pt Current branch string is '${branchName}: '."
+  _pt="$_pt Your only output should be the commit message as entered."
   _msg="$(git diff --staged | sgpt "$_pt")"
   _prefixedMsg="$branchName: $_msg"
-  git commit -m "$_prefixedMsg"
+  git commit -m "$_prefixedMsg" >> /dev/null
+  _editor=${EDITOR:-vim}
+  EDITOR=nvim
+  git commit --amend
+  EDITOR=$_editor
   echo "Used git to commit below message:"
   echo
   echo "$_prefixedMsg"
