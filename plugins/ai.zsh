@@ -12,7 +12,7 @@ function gitgpt {
   _pt="$_pt That includes the branch name, colon and space."
   _pt="$_pt Current branch string is '${branchName}: '."
   _pt="$_pt Your only output should be the commit message as entered."
-  _msg="$(git diff --staged | sgpt "$_pt")"
+  _msg="$(git diff --staged | sgpt ${_pt})"
   _prefixedMsg="$branchName: $_msg"
   git commit -m "$_prefixedMsg" >> /dev/null
   _editor=${EDITOR:-vim}
@@ -25,6 +25,6 @@ function gitgpt {
   echo
   echo "To amend the commit message, run: git commit --amend"
   echo
-  echo "Don't forget to push your changes!
+  echo "Don't forget to push your changes!"
 }
 
