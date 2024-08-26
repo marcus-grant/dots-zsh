@@ -46,6 +46,7 @@ source "$DOTSDIRZ/aliases.zsh"
 ### Plugins
 source $DOTSDIRZPLUG/general.zsh
 source $DOTSDIRZPLUG/fzf.zsh
+source $DOTSDIRZPLUG/pass.zsh
 source $DOTSDIRZPLUG/go.zsh
 source $DOTSDIRZPLUG/hcloud.zsh
 source $DOTSDIRZPLUG/molecule.zsh
