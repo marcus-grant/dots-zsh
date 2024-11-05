@@ -26,7 +26,9 @@ fi
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export LS_OPTIONS="-G"
 elif [[ "$OSTYPE" == "linux"* ]]; then
-    export LS_OPTIONS="--color=auto --group-directories-first"
+    # DELETEME: ??? group-dir-first not an option anymore?
+    # export LS_OPTIONS="--color=auto --group-directories-first"
+    export LS_OPTIONS="--color=auto"
 else
     export LS_OPTIONS=""
 fi
