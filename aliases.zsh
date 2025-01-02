@@ -63,6 +63,20 @@ if command -v fdfind &> /dev/null; then
     alias fd='fdfind'
 fi
 
+### Clipboard
+# Clipboard aliases for Linux
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  if command -v wl-copy &>/dev/null && command -v wl-paste &>/dev/null; then
+    alias cc='wl-copy'
+    alias cv='wl-paste'
+  elif command -v xclip &>/dev/null; then
+    alias cc='xclip -selection clipboard'
+    alias cv='xclip -selection clipboard -o'
+  else
+    echo "No compatible clipboard manager found. Install 'wl-clipboard' or 'xclip'." >&2
+  fi
+fi
+
 ### Editing
 alias edit="$EDITOR"
 alias ezrc="$EDITOR $DOTSDIRZ/profile.zsh"
