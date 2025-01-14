@@ -68,7 +68,8 @@ fi
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   if command -v wl-copy &>/dev/null && command -v wl-paste &>/dev/null; then
     alias cc='wl-copy'
-    alias cv='wl-paste'
+    # alias cv='wl-paste' # NOTE: This can cause issues when piping or cat'ing ambiguous types
+    alias cv='wl-paste --no-newline --type text/plain'
   elif command -v xclip &>/dev/null; then
     alias cc='xclip -selection clipboard'
     alias cv='xclip -selection clipboard -o'
