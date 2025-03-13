@@ -112,3 +112,12 @@ alias glog='git log --oneline --decorate --all --graph'
 
 ### Pass/PWGen/password stuff
 alias pwgen16='pwgen -ncy 16 1'
+
+### Misc.
+## SQLite
+# Check for sqlite3 or sqlite command and shorten to sqlt
+if command -v sqlite3 >/dev/null 2>&1; then
+  alias sqlt='sqlite3'
+elif command -v sqlite >/dev/null 2>&1; then
+    alias sqlt='sqlite'
+fi 
