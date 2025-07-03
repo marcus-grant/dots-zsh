@@ -5,7 +5,7 @@
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/systemd/systemd.plugin.zsh
 
 ### General
-clr='clear' # Clear the terminal
+alias clr='clear' # Clear the terminal
 
 ### LS
 # TODO: Remove the symlink arrows in ls, they always wrap, just show its a link
