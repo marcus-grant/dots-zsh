@@ -4,6 +4,9 @@
 # Use oh my zsh's environment as an example, here's systemd plugin below:
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/systemd/systemd.plugin.zsh
 
+### General
+clr='clear' # Clear the terminal
+
 ### LS
 # TODO: Remove the symlink arrows in ls, they always wrap, just show its a link
 # macOS doesn't respect --color, use -G instead
