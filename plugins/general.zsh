@@ -34,3 +34,7 @@ alias timestampwk='timestamp-week'
 alias tstampwk='timestamp-week'
 alias week='timestamp-week'
 alias wk='timestamp-week'
+
+# atuin # TODO: Respect XDG_CONFIG_HOME and .local/bin
+source "$HOME/.atuin/bin/env"
+eval "$(atuin init zsh)"
