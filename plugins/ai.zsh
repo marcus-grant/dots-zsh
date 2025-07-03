@@ -28,3 +28,6 @@ function gitgpt {
   echo "Don't forget to push your changes!"
 }
 
+# Alias for claude
+#
+# alias claude="$HOME/.claude/local/claude"

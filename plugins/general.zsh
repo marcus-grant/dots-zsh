@@ -35,6 +35,11 @@ alias tstampwk='timestamp-week'
 alias week='timestamp-week'
 alias wk='timestamp-week'
 
+# Ghostty / Terminals
+if [ -e "$HOME/.local/bin/ghostty-toggle" ]; then
+  alias gttyt="$HOME/.local/bin/ghostty-toggle"
+fi
+
 # atuin # TODO: Respect XDG_CONFIG_HOME and .local/bin
 source "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh)"
