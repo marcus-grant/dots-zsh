@@ -40,6 +40,5 @@ if [ -e "$HOME/.local/bin/ghostty-toggle" ]; then
   alias gttyt="$HOME/.local/bin/ghostty-toggle"
 fi
 
-# atuin # TODO: Respect XDG_CONFIG_HOME and .local/bin
-source "$HOME/.atuin/bin/env"
+# atuin
 eval "$(atuin init zsh)"
